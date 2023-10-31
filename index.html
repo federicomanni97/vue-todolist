@@ -17,7 +17,7 @@
             <header class="text-center">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21QQs3kWvFjA1iunhwKB0DbaEnUCU9uBKhNG1yxY0&s" alt="Logo" />
               <div class="my-4">
-                <input type="text" class="form-control w-50 d-inline-block mx-3" v-model="addedText"  />
+                <input type="text" class="form-control w-50 d-inline-block mx-3" v-model="addedText" @keyup.enter="addNewList()"/>
                 <button class="btn btn-secondary align-middle" @click="addNewList()">Add Task</button>
               </div>
             </header>

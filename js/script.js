@@ -40,6 +40,10 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 - la funzione crea un nuovo oggetto todo usando nuova variabile in data() e pusha dentro array `todos`
 - svuotare input
 
+1- oltre al click sul pulsante intercettare anche il tasto enter per aggiungere il todo alla lista
+1- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente
+(se done era uguale a false, impostare true e viceversa)
+
 */
 
 const {createApp} = Vue;
