@@ -62,12 +62,24 @@ createApp({
                     text: 'Telefonare a mamma',
                     done: false
                 },
-            ]
-        }
+            ],
+            idAdder: 3,
+            addedText: ''
+        }  
     },
     methods: {
         listRemove(index){
             this.tasks.splice(index,1)
+        },
+        addNewList(){
+            this.idAdder++;
+            const newTask = {
+                id: this.idAdder,
+                text: this.addedText,
+                done:false
+            }
+            this.tasks.push(newTask);
+            this.addedText = '';
         }
     },
 }).mount('#app');
