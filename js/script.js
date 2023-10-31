@@ -64,5 +64,10 @@ createApp({
                 },
             ]
         }
-    }
+    },
+    methods: {
+        listRemove(index){
+            this.tasks.splice(index,1)
+        }
+    },
 }).mount('#app');
