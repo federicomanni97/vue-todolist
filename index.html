@@ -17,13 +17,13 @@
             <header class="text-center">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21QQs3kWvFjA1iunhwKB0DbaEnUCU9uBKhNG1yxY0&s" alt="Logo" />
               <div class="my-4">
-                <input type="text" class="form-control w-50 d-inline-block mx-3" v-model="addedText" @keyup.enter="addNewList()"/>
+                <input type="text" class="form-control w-50 d-inline-block mx-3" v-model="addedText" @keyup.enter="addNewList() "/>
                 <button class="btn btn-secondary align-middle" @click="addNewList()">Add Task</button>
               </div>
             </header>
             <main>
               <ul class="list-group">
-                <li class="list-group-item list-group-item-action d-flex justify-content-between" v-for="(todos, index) in tasks" :key="todos.id" :class="{'done':todos.done}">
+                <li class="list-group-item d-flex justify-content-between" @click="listCheck(index)" v-for="(todos, index) in tasks" :key="todos.id" :class="{'done':todos.done}">
                   <span>{{todos.text}}</span>
                   <i class="fa-solid fa-trash" style="cursor: pointer" @click="listRemove(index)"></i>
                 </li>

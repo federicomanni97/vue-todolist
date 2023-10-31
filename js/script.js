@@ -84,6 +84,9 @@ createApp({
             }
             this.tasks.push(newTask);
             this.addedText = '';
+        },
+        listCheck(index){
+            this.tasks[index].done = !this.tasks[index].done
         }
     },
 }).mount('#app');
